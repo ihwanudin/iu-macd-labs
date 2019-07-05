@@ -6,6 +6,8 @@
 </head>
 <body>
  
+ 
+ 
 <script type="text/javascript">
     function processImage() {
         // **********************************************
@@ -73,10 +75,16 @@
 <h1>Analisa Gambar dengan Azure Computer Vision</h1>
 Pilih gambar yang akan di Analisa.
 <br><br>
-Image to analyze:
+<form name="nama_form" enctype="multipart/form-data"
+   action="proses.php" method="POST">
+ 
+   Upload Gambar: <input type="file" accept="image/*"/>
+   <br />
+   <input type="submit"  value="Proses Upload" onclick="processImage()">
+ <!--  
 <input type="text" name="inputImage" id="inputImage"
     value="http://upload.wikimedia.org/wikipedia/commons/3/3c/Shaki_waterfall.jpg" />
-<button onclick="processImage()">Analyze image</button>
+<button onclick="processImage()">Analyze image</button>-->
 <br><br>
 <div id="wrapper" style="width:1020px; display:table;">
     <div id="jsonOutput" style="width:600px; display:table-cell;">
